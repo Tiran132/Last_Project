@@ -1,8 +1,4 @@
-Pages:
 
--index
--sites
--one site
 
 # Portfolio
 ### Models:
