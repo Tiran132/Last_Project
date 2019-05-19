@@ -1,6 +1,5 @@
 from django.db import models
-
-# Create your models here.
+from categories.models import Category
 
 
 class Site(models.Model):
@@ -10,7 +9,7 @@ class Site(models.Model):
     category = models.ForeignKey(
         to=Category,
         related_name="sites",
-        on_delete=models.CASCADE()
+        on_delete=models.CASCADE
     )
 
     def __str__(self):
@@ -22,5 +21,5 @@ class Likes(models.Model):
     likes = models.ForeignKey(
         to=Site,
         related_name="likes",
-        on_delete=models.CASCADE()
+        on_delete=models.CASCADE
     )
