@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>ROUND UP</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+		}
+		html{
+			min-height: 100%;
+		}
+		body{
+			min-height: 100%;
+			background-color: #F1FAEE;
+		}
+		.container{
+			width: 75vw;
+			margin: auto;
+		}
+		.container-flex{
+			width: 75vw;
+			margin: auto;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+		}
+		.at-c{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+		}
+		.wrapper{
+			position: relative;
+			min-height: 100vh;
+		}
+		header{
+			background-color: #457B9D;
+			color: #F1FAEE;
+		}
+		.logo{
+			font-size: 4vh;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.links{
+			display: block;
+		}
+		.links li{
+			margin: 0 1.5vw;
+			padding: 1.5vh 0;
+			list-style: none;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		.links li a{
+			font-weight: 500;
+			color: #F1FAEE;
+			text-decoration: none;
+			opacity: 1;
+			transition: .3s ease;
+		}
+		.links li:hover a{
+			opacity: .7;
+		}
+		.content{
+			padding-bottom: 5vh;
+			margin-top: 5vh;
+			color: #14253d;
+		}
+
+		.block{
+			background-color: #E2E2E2;
+			margin-bottom: 3vh;
+		}
+		.img-block{
+			width: 100%;
+			position: relative;
+		}
+		.container img{
+			width: 100%;
+		}
+		.likes{
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 7vh;
+			width: 7vh;
+			line-height: 7vh;
+			text-align: center;
+			color: #eee;
+			background-color: rgba(38, 38, 38, .3);
+		}
+		.likes i{
+			color: #E63946;
+            margin-left: .1vw;
+            font-size: 1.9vh;
+		}
+		footer{
+			color: #14253d;
+			width: 100%;
+			position: absolute;
+			bottom: 1vh;
+			text-align: center;
+		}
+	</style>
+	<div class="wrapper">
+		<header>
+			<div class="at-c container container-flex">
+				<div class="logo">portfolio</div>
+				<ul class="links">
+					<li><a href="/">Home</a></li>
+					<li><a href="/categories">Categories</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="content">
+			<div class="container">
+				<div class="img-block">
+					<img src="{{ site.img }}" alt="img">
+					<h3 class="likes">{{ likes }}<i class="fas fa-heart"></i></h3>
+				</div>
+				<h1>{{ site.title }}</h1>
+				<p>{{ site.info }}</p>
+			</div>
+		</div>
+		<footer>
+			©Portflio.com
+		</footer>
+	</div>
+</body>
+</html>

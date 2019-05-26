@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from categories.models import Category
 
@@ -16,9 +17,14 @@ class Site(models.Model):
         return self.title[:20]
 
 
-class Likes(models.Model):
-    num = models.IntegerField()
-    likes = models.ForeignKey(
+class Like(models.Model):
+    created = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(
+        to=User,
+        related_name="user",
+        on_delete=models.CASCADE
+    )
+    site = models.ForeignKey(
         to=Site,
         related_name="likes",
         on_delete=models.CASCADE

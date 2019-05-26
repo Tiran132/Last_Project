@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Last_Project.views import show_categories_page, show_main_page, show_one_category, show_site_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('categories/', show_categories_page),
+    path('', show_main_page),
+    path('categories/<int:category_id>', show_one_category),
+    path('sites/<int:site_id>', show_site_page),
 ]
